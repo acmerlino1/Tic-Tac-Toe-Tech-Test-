@@ -34,4 +34,10 @@ describe Move do
     end
   end
 
+  describe '#get_row' do
+    it 'player enters row as top' do
+    expect(subject.get_row).to eq(0)
+    end
+  end
+
 end

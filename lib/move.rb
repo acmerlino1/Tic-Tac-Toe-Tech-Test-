@@ -1,5 +1,9 @@
 class Move
 
+  def get_row
+    0
+  end
+
   def player_move(row, column)
     if column == 'left' 
       if row == 'top'
