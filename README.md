@@ -1,6 +1,6 @@
 # Tic-Tac-Toe-Tech-Test
 
-A game of Tic Tac Toe fo 2 players.
+A game of Tic Tac Toe for 2 players.
 
 The rules of tic-tac-toe are as follows:
 
@@ -11,3 +11,19 @@ A turn ends when a player claims a field
 A player wins if they claim all the fields in a row, column or diagonal
 A game is over if a player wins
 A game is over when all fields are taken
+
+##Run Tests
+Clone repository
+
+```
+$ bundle install
+$ rspec
+```
+
+##Run Game
+Clone repository
+
+```
+$ bundle install
+$ 
+```
