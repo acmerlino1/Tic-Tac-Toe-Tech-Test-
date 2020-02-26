@@ -2,18 +2,12 @@ class Move
 
   def get_row(user_input = gets.chomp)
     puts 'Enter row (top, middle or bottom):'
-    row = user_input
-    if row == 'top'
-      0
-    elsif row == 'middle'
-      2
-    else
-      4
-    end
+    rows = {'top' => 0, 'middle' => 2, 'bottom' => 4}
+    rows[user_input]
   end
 
   def get_column(user_input = gets.chomp)
-
+    puts 'Enter row (left, middle or right):'
     columns = {'left' => 0, 'middle' => 2, 'right' => 4}
     columns[user_input]
   end
