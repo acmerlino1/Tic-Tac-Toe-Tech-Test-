@@ -1,7 +1,13 @@
 class Move
 
-  def get_row
-    0
+  def get_row(user_input = gets.chomp)
+    puts 'enter row (top, middle or bottom):'
+    row = user_input
+    if row == 'top'
+      0
+    else
+      2
+    end
   end
 
   def player_move(row, column)
