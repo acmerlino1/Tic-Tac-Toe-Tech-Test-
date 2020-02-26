@@ -20,6 +20,12 @@ describe Move do
       column = 'right'
       expect(subject.player_move(row, column)).to eq({row: 0, column: 4})
     end
+
+    it 'Returns a hash with players moves as co-ordinates 2 and 0' do
+      row = 'middle'
+      column = 'left'
+      expect(subject.player_move(row, column)).to eq({row: 2, column: 0})
+    end
   end
 
 end
