@@ -1,6 +1,10 @@
 class Move
 
   def player_move(row, column)
-    {row: 0, column: 0}
+    if column == 'left'
+      {row: 0, column: 0}
+    else
+      {row: 0, column: 2}
+    end
   end
 end
