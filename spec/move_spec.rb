@@ -51,4 +51,11 @@ describe Move do
     end
   end
 
+  describe '#get_column' do
+    it 'player enters left column, returns 0' do
+      user_input = 'left'
+      expect(subject.get_column(user_input)).to eq(0)
+    end
+  end
+
 end

@@ -12,7 +12,12 @@ class Move
     end
   end
 
+  def get_column(user_input = gets.chomp)
+    0
+  end
+
   def player_move(row, column)
+    
     if column == 'left' 
       if row == 'top'
         {row: 0, column: 0}
