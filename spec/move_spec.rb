@@ -35,14 +35,19 @@ describe Move do
   end
 
   describe '#get_row' do
-    it 'player enters row as top' do
+    it 'player enters row as top, returns 0' do
       user_input = 'top'
       expect(subject.get_row(user_input)).to eq(0)
     end
 
-    it 'player enters row as middle' do
+    it 'player enters row as middle, returns 2' do
       user_input = 'middle'
       expect(subject.get_row(user_input)).to eq(2)
+    end
+    
+    it 'player enters row as bottom, returns 4' do
+      user_input = 'bottom'
+      expect(subject.get_row(user_input)).to eq(4)
     end
   end
 

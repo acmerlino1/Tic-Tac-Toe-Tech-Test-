@@ -1,12 +1,14 @@
 class Move
 
   def get_row(user_input = gets.chomp)
-    puts 'enter row (top, middle or bottom):'
+    puts 'Enter row (top, middle or bottom):'
     row = user_input
     if row == 'top'
       0
-    else
+    elsif row == 'middle'
       2
+    else
+      4
     end
   end
 
