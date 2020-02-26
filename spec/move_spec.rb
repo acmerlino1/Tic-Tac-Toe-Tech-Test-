@@ -61,6 +61,11 @@ describe Move do
       user_input = 'middle'
       expect(subject.get_column(user_input)).to eq(2)
     end
+
+    it 'player enters right column, returns 4' do
+      user_input = 'right'
+      expect(subject.get_column(user_input)).to eq(4)
+    end
   end
 
 end

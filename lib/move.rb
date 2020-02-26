@@ -17,6 +17,8 @@ class Move
       0
     elsif user_input == 'middle'
       2
+    else
+      4
     end
   end
 
