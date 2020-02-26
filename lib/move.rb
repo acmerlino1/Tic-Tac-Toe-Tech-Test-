@@ -13,7 +13,11 @@ class Move
   end
 
   def get_column(user_input = gets.chomp)
-    0
+    if user_input == 'left'
+      0
+    elsif user_input == 'middle'
+      2
+    end
   end
 
   def player_move(row, column)
