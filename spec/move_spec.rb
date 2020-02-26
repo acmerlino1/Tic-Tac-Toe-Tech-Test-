@@ -34,37 +34,37 @@ describe Move do
     end
   end
 
-  describe '#get_row' do
+  describe '#row' do
     it 'player enters row as top, returns 0' do
       user_input = 'top'
-      expect(subject.get_row(user_input)).to eq(0)
+      expect(subject.row(user_input)).to eq(0)
     end
 
     it 'player enters row as middle, returns 2' do
       user_input = 'middle'
-      expect(subject.get_row(user_input)).to eq(2)
+      expect(subject.row(user_input)).to eq(2)
     end
     
     it 'player enters row as bottom, returns 4' do
       user_input = 'bottom'
-      expect(subject.get_row(user_input)).to eq(4)
+      expect(subject.row(user_input)).to eq(4)
     end
   end
 
-  describe '#get_column' do
+  describe '#column' do
     it 'player enters left column, returns 0' do
       user_input = 'left'
-      expect(subject.get_column(user_input)).to eq(0)
+      expect(subject.column(user_input)).to eq(0)
     end
 
     it 'player enters middle column, returns 2' do
       user_input = 'middle'
-      expect(subject.get_column(user_input)).to eq(2)
+      expect(subject.column(user_input)).to eq(2)
     end
 
     it 'player enters right column, returns 4' do
       user_input = 'right'
-      expect(subject.get_column(user_input)).to eq(4)
+      expect(subject.column(user_input)).to eq(4)
     end
   end
 
