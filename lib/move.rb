@@ -13,13 +13,9 @@ class Move
   end
 
   def get_column(user_input = gets.chomp)
-    if user_input == 'left'
-      0
-    elsif user_input == 'middle'
-      2
-    else
-      4
-    end
+
+    columns = {'left' => 0, 'middle' => 2, 'right' => 4}
+    columns[user_input]
   end
 
   def player_move(row, column)
