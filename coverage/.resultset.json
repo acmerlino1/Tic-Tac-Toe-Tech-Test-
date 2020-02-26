@@ -46,6 +46,13 @@
           null,
           1,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null,
           null
         ]
@@ -53,10 +60,14 @@
       "/Users/chrisdavidmerlino/Projects/tech-tests/Tic-Tac-Toe-Tech-Test-/lib/move.rb": {
         "lines": [
           1,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1582726183
+    "timestamp": 1582727120
   }
 }
