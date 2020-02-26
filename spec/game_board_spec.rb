@@ -1,6 +1,6 @@
-require 'game'
+require 'game_board'
 
-describe Game do
+describe GameBoard do
 
   describe '#print_board' do
     it 'prints the board' do
