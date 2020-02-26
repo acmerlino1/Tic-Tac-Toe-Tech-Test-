@@ -12,4 +12,8 @@ class Game
     ]
   end
 
+  def print_board
+    @board.each { |row| puts row.join(" ") }
+  end
+
 end
