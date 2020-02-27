@@ -21,4 +21,9 @@ class Game
     @move.move
   end
 
+  def add_player_move
+    @board.update_board(@move.move, 'X')
+  end
+
+
 end

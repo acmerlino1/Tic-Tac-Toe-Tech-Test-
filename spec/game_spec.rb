@@ -11,6 +11,7 @@ describe Game do
     allow(move).to receive(:get_row)
     allow(move).to receive(:get_column)
     allow(move).to receive(:move) { {row: 0, column: 0} }
+    allow(board).to receive(:update_board).with(move.move, 'X') { [["X", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "]] }
   end
   
   describe '#current_turn' do
@@ -35,6 +36,12 @@ describe Game do
   describe '#get_player_move' do
     it 'Get player 1 move' do
       expect(subject.get_player_move).to be_kind_of(Hash)
+    end
+  end
+
+  describe '#add_player_move' do
+    it 'Uses the player move to update the board' do
+      expect(subject.add_player_move).to eq([["X", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "]])
     end
   end
 
