@@ -1,6 +1,11 @@
 require 'game'
 
 describe Game do
+
+  let(:board) { double :board }
+  let(:move) { double :move }
+
+  subject { described_class.new(board, move) }
   
   describe '#current_turn' do
     it 'returns player 1 for current turn at beginning of game' do
