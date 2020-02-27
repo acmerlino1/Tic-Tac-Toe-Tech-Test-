@@ -26,7 +26,10 @@ class Move
   end
 
   def column(user_column = gets.chomp)
+    user_column.downcase
     columns = {'left' => 0, 'middle' => 2, 'right' => 4}
+    raise 'Invalid choice' if !columns.has_key?(user_column)
+
     @move[:column] = columns[user_column]
   end
 

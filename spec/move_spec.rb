@@ -79,6 +79,11 @@ describe Move do
       user_column = 'right'
       expect(subject.column(user_column)).to eq(4)
     end
+
+    it 'raises error if input not valid' do
+      user_column = 'last column'
+      expect { subject.column(user_column) }.to raise_error 'Invalid choice'
+    end
   end
 
 end
