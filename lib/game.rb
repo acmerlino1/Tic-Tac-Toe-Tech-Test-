@@ -12,7 +12,13 @@ class Game
   end
 
   def change_turn
-    @current_turn =='Player 1' ? @current_turn = 'Player 2' : @current_turn = 'Player 1'
+    @current_turn == 'Player 1' ? @current_turn = 'Player 2' : @current_turn = 'Player 1'
+  end
+
+  def get_player_move
+    @move.get_row
+    @move.get_column
+    @move.move
   end
 
 end

@@ -6,6 +6,12 @@ describe Game do
   let(:move) { double :move }
 
   subject { described_class.new(board, move) }
+
+  before do
+    allow(move).to receive(:get_row)
+    allow(move).to receive(:get_column) # { [{ credit: '10.00', debit: nil, balance: '10.00', time: '25/02/2020' }] }
+    allow(move).to receive(:move) { {row: 0, column: 0} }
+  end
   
   describe '#current_turn' do
     it 'returns player 1 for current turn at beginning of game' do
@@ -23,6 +29,12 @@ describe Game do
       subject.change_turn
       subject.change_turn
       expect(subject.current_turn).to eq('Player 1')
+    end
+  end
+
+  describe '#get_player_move' do
+    it 'Get player 1s move' do
+      expect(subject.get_player_move).to be_kind_of(Hash)
     end
   end
   
