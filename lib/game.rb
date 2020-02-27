@@ -7,10 +7,6 @@ class Game
   end
 
   def change_turn
-    if @current_turn == 'Player 1'
-      @current_turn = 'Player 2'
-    else
-      @current_turn = 'Player 1'
-    end
+    @current_turn =='Player 1' ? @current_turn = 'Player 2' : @current_turn = 'Player 1'
   end
 end
