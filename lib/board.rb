@@ -16,8 +16,8 @@ class Board
     @board.each { |row| puts row.join(" ") }
   end
 
-  def update_board(player_move)
-    @board[player_move[:row]][player_move[:column]] = 'X'
+  def update_board(player_move, player_symbol)
+    @board[player_move[:row]][player_move[:column]] = player_symbol
     @board
   end
 

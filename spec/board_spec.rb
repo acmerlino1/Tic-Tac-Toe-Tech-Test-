@@ -10,11 +10,15 @@ describe Board do
 
   describe '#update_board' do
     it 'adds X in top left corner of board' do
-      expect(subject.update_board({row: 0, column: 0})).to eq([["X", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "]])
+      expect(subject.update_board({row: 0, column: 0}, 'X')).to eq([["X", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "]])
     end
 
     it 'adds X in middle of board' do
-      expect(subject.update_board({row: 2, column: 2})).to eq([[" ", "|", " ", "|", " "], ["----------"], [" ", "|", "X", "|", " "], ["----------"], [" ", "|", " ", "|", " "]])
+      expect(subject.update_board({row: 2, column: 2}, 'X')).to eq([[" ", "|", " ", "|", " "], ["----------"], [" ", "|", "X", "|", " "], ["----------"], [" ", "|", " ", "|", " "]])
+    end
+
+    it 'adds O in middle of board' do
+      expect(subject.update_board({row: 2, column: 2}, 'O')).to eq([[" ", "|", " ", "|", " "], ["----------"], [" ", "|", "O", "|", " "], ["----------"], [" ", "|", " ", "|", " "]])
     end
   end
 
