@@ -14,6 +14,7 @@ class Game
 
   def change_turn
     @current_turn == 'Player 1' ? @current_turn = 'Player 2' : @current_turn = 'Player 1'
+    change_symbol
   end
 
   def get_player_move
@@ -28,6 +29,16 @@ class Game
 
   def add_player_move
     @board.update_board(@move.move, @symbol)
+  end
+
+  def play_game
+    while true do
+      @board.print_board
+      puts "#{@current_turn}'s turn"
+      get_player_move
+      add_player_move
+      change_turn
+    end
   end
 
 

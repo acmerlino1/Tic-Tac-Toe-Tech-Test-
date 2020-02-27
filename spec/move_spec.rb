@@ -57,6 +57,11 @@ describe Move do
       user_row = 'bottom'
       expect(subject.row(user_row)).to eq(4)
     end
+
+    it 'raises error if input not valid' do
+      user_row = 'last line'
+      expect { subject.row(user_row) }.to raise_error 'Invalid choice'
+    end
   end
 
   describe '#column' do

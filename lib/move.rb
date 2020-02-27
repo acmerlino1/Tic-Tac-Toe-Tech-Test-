@@ -17,6 +17,10 @@ class Move
   end
 
   def row(user_row = gets.chomp)
+    user_row.downcase
+    rows = {'top' => 0, 'middle' => 2, 'bottom' => 4}
+    raise 'Invalid choice' if !rows.has_key?(user_row)
+    
     rows = {'top' => 0, 'middle' => 2, 'bottom' => 4}
     @move[:row] = rows[user_row]
   end

@@ -60,5 +60,11 @@ describe Game do
   end
 
 
+  describe '#play_game' do
+    it 'runs the game' do
+      
+    end
+  end
+
   
 end
