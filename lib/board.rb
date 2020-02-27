@@ -17,7 +17,7 @@ class Board
   end
 
   def update_board(player_move)
-    @board[player_move[:row]][0] = 'X'
+    @board[player_move[:row]][player_move[:column]] = 'X'
     @board
   end
 
