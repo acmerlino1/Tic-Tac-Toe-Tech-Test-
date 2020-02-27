@@ -54,7 +54,7 @@ describe Move do
     end
     
     it 'player enters row as bottom, returns 4' do
-      user_row = 'bottom'
+      user_row = 'Bottom'
       expect(subject.row(user_row)).to eq(4)
     end
 
@@ -76,7 +76,7 @@ describe Move do
     end
 
     it 'player enters right column, returns 4' do
-      user_column = 'right'
+      user_column = 'Right'
       expect(subject.column(user_column)).to eq(4)
     end
 

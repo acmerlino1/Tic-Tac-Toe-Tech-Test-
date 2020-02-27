@@ -17,7 +17,7 @@ class Move
   end
 
   def row(user_row = gets.chomp)
-    user_row.downcase
+    user_row.downcase!
     rows = {'top' => 0, 'middle' => 2, 'bottom' => 4}
     raise 'Invalid choice' if !rows.has_key?(user_row)
     
@@ -26,7 +26,7 @@ class Move
   end
 
   def column(user_column = gets.chomp)
-    user_column.downcase
+    user_column.downcase!
     columns = {'left' => 0, 'middle' => 2, 'right' => 4}
     raise 'Invalid choice' if !columns.has_key?(user_column)
 
