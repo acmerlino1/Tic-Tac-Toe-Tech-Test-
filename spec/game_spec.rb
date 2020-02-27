@@ -9,7 +9,7 @@ describe Game do
 
   before do
     allow(move).to receive(:get_row)
-    allow(move).to receive(:get_column) # { [{ credit: '10.00', debit: nil, balance: '10.00', time: '25/02/2020' }] }
+    allow(move).to receive(:get_column)
     allow(move).to receive(:move) { {row: 0, column: 0} }
   end
   
@@ -33,9 +33,11 @@ describe Game do
   end
 
   describe '#get_player_move' do
-    it 'Get player 1s move' do
+    it 'Get player 1 move' do
       expect(subject.get_player_move).to be_kind_of(Hash)
     end
   end
+
+
   
 end
