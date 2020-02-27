@@ -12,6 +12,7 @@ describe Game do
     allow(move).to receive(:get_column)
     allow(move).to receive(:move) { {row: 0, column: 0} }
     allow(board).to receive(:update_board).with(move.move, 'X') { [["X", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "]] }
+
   end
   
   describe '#current_turn' do
@@ -39,8 +40,21 @@ describe Game do
     end
   end
 
+  describe '#change_symbol' do
+    it 'changes symbol to X if player 1s turn' do
+      subject.change_symbol
+      expect(subject.symbol).to eq('X')
+    end
+
+    it 'changes symbol to O if player 2s turn' do
+      subject.change_turn
+      subject.change_symbol
+      expect(subject.symbol).to eq('O')
+    end
+  end
+
   describe '#add_player_move' do
-    it 'Uses the player move to update the board' do
+    it 'Uses the player move to update the board with X' do
       expect(subject.add_player_move).to eq([["X", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "], ["----------"], [" ", "|", " ", "|", " "]])
     end
   end

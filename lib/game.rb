@@ -3,12 +3,13 @@ require_relative 'move'
 
 class Game
 
-  attr_reader :current_turn
+  attr_reader :current_turn, :symbol
 
   def initialize(board = Board.new, move = Move.new)
     @board = board
     @move = move
     @current_turn = 'Player 1'
+    @symbol = 'X'
   end
 
   def change_turn
@@ -21,8 +22,12 @@ class Game
     @move.move
   end
 
+  def change_symbol
+    @current_turn == 'Player 1' ? @symbol = 'X' : @symbol = 'O'
+  end
+
   def add_player_move
-    @board.update_board(@move.move, 'X')
+    @board.update_board(@move.move, @symbol)
   end
 
 
