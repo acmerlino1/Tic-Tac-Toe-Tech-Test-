@@ -21,4 +21,8 @@ class Board
     @board
   end
 
+  def check_position
+    true
+  end
+
 end

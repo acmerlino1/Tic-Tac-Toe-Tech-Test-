@@ -33,4 +33,8 @@ class Move
     @move[:column] = columns[user_column]
   end
 
+  def check_position
+    true
+  end
+
 end

@@ -86,4 +86,10 @@ describe Move do
     end
   end
 
+  describe '#check_position' do
+    it 'checks where player wants to move is available' do
+      expect(subject.check_position).to be(true)
+    end
+  end
+
 end

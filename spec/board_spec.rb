@@ -21,6 +21,5 @@ describe Board do
       expect(subject.update_board({row: 2, column: 2}, 'O')).to eq([[" ", "|", " ", "|", " "], ["----------"], [" ", "|", "O", "|", " "], ["----------"], [" ", "|", " ", "|", " "]])
     end
   end
-
   
 end
