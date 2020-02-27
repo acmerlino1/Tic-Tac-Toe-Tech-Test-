@@ -2,37 +2,37 @@ require 'move'
 
 describe Move do
   
-  describe '#player_move' do
-    it 'Returns a hash with player move as co-ordinates 0 and 0' do
-      user_row = 'top'
-      user_column = 'left'
-      expect(subject.player_move(subject.row(user_row), subject.column(user_column))).to eq({row: 0, column: 0})
-    end
-    
-    it 'Returns a hash with players moves as co-ordinates 0 and 2' do
-      user_row = 'top'
-      user_column = 'middle'
-      expect(subject.player_move(subject.row(user_row), subject.column(user_column))).to eq({row: 0, column: 2})
-    end 
-    
-    it 'Returns a hash with players moves as co-ordinates 0 and 4' do
-      user_row = 'top'
-      user_column = 'right'
-      expect(subject.player_move(subject.row(user_row), subject.column(user_column))).to eq({row: 0, column: 4})
-    end
-
-    it 'Returns a hash with players moves as co-ordinates 2 and 0' do
-      user_row = 'middle'
-      user_column = 'left'
-      expect(subject.player_move(subject.row(user_row), subject.column(user_column))).to eq({row: 2, column: 0})
-    end
-
-    it 'Returns a hash with players moves as co-ordinates 4 and 0' do
-      user_row = 'bottom'
-      user_column = 'left'
-      expect(subject.player_move(subject.row(user_row), subject.column(user_column))).to eq({row: 4, column: 0})
-    end
+  it 'Returns a hash with player move as co-ordinates 0 and 0' do
+    user_row = 'top'
+    user_column = 'left'
+    subject.row(user_row)
+    subject.column(user_column)
+    expect(subject.move).to eq({row: 0, column: 0})
   end
+    
+  #   it 'Returns a hash with players moves as co-ordinates 0 and 2' do
+  #     user_row = 'top'
+  #     user_column = 'middle'
+  #     expect(subject.player_move(subject.row(user_row), subject.column(user_column))).to eq({row: 0, column: 2})
+  #   end 
+    
+  #   it 'Returns a hash with players moves as co-ordinates 0 and 4' do
+  #     user_row = 'top'
+  #     user_column = 'right'
+  #     expect(subject.player_move(subject.row(user_row), subject.column(user_column))).to eq({row: 0, column: 4})
+  #   end
+
+  #   it 'Returns a hash with players moves as co-ordinates 2 and 0' do
+  #     user_row = 'middle'
+  #     user_column = 'left'
+  #     expect(subject.player_move(subject.row(user_row), subject.column(user_column))).to eq({row: 2, column: 0})
+  #   end
+
+  #   it 'Returns a hash with players moves as co-ordinates 4 and 0' do
+  #     user_row = 'bottom'
+  #     user_column = 'left'
+  #     expect(subject.move).to eq({row: 4, column: 0})
+  #   end
 
   describe '#row' do
     it 'player enters row as top, returns 0' do
