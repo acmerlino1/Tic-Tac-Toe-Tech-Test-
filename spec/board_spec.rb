@@ -1,4 +1,4 @@
-require 'game_board'
+require 'board'
 
 describe GameBoard do
 

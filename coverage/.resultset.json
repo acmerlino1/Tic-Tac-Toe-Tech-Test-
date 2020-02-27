@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chrisdavidmerlino/Projects/tech-tests/Tic-Tac-Toe-Tech-Test-/spec/game_board_spec.rb": {
+      "/Users/chrisdavidmerlino/Projects/tech-tests/Tic-Tac-Toe-Tech-Test-/spec/board_spec.rb": {
         "lines": [
           1,
           null,
@@ -17,7 +17,7 @@
           null
         ]
       },
-      "/Users/chrisdavidmerlino/Projects/tech-tests/Tic-Tac-Toe-Tech-Test-/lib/game_board.rb": {
+      "/Users/chrisdavidmerlino/Projects/tech-tests/Tic-Tac-Toe-Tech-Test-/lib/board.rb": {
         "lines": [
           1,
           null,
@@ -38,6 +38,11 @@
           null,
           null,
           null
+        ]
+      },
+      "/Users/chrisdavidmerlino/Projects/tech-tests/Tic-Tac-Toe-Tech-Test-/spec/game_spec.rb": {
+        "lines": [
+
         ]
       },
       "/Users/chrisdavidmerlino/Projects/tech-tests/Tic-Tac-Toe-Tech-Test-/spec/move_spec.rb": {
@@ -157,6 +162,6 @@
         ]
       }
     },
-    "timestamp": 1582802457
+    "timestamp": 1582802733
   }
 }
